@@ -1,0 +1,6 @@
+[package]
+name = "data_structures_in_rust"
+version = "0.1.0"
+authors = ["janarthanan <janarthanan@onedatasoftware.com>"]
+
+[dependencies]

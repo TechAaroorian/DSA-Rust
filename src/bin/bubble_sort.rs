@@ -28,33 +28,19 @@
 *
 */
 
-use std::io;
-
 fn main() {
-    let mut user_input = String::new();
 
-    println!("\nPlease enter numbers to sort:");
-
-    // Getting user input 
-    io::stdin().read_line(&mut user_input)
-        .expect("Failed to read input");
-
-    // Splitting and parsing the string to integers in vector
-    let mut num_list: Vec<i32> = user_input.split_whitespace()
-        .filter_map( |x| x.parse().ok() )
-        .collect();
+    let mut num_list = vec![2, 43, 3, 56, 7, 8, 9, 65, 10, 11, 12, 21];
 
     let num_list_len = num_list.len();
     let mut got_swap;
     let mut i;
-    let mut phase_count = 1;
 
     println!();
 
     // Loop until sorting is finish
     loop {
-        println!("Pass {}:", phase_count);
-        phase_count += 1;
+        println!();
         i = 0;
         got_swap = false;
         while i < num_list_len - 1 {
